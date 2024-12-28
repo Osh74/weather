@@ -1,1 +1,1 @@
-print("my project is very amazing")
+print("my project is very very amazing")
