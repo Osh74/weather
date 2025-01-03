@@ -1,7 +1,8 @@
 import requests
 import json
+import streamlit as st
 
-api_key='a62b27f77c9f45ecab8123608242812'
+API_K=st.secrets["api_key"] #Access to secret
 
 city_name=input("Please enter a city name for getting the current weather in it: ")
 
@@ -9,7 +10,7 @@ def weatherֹ_by_city(city_name, api_key):
 
     #Base + complete url for the API request
     base_url="http://api.weatherapi.com/v1/current.json?"
-    complete_url=base_url + "key=" + api_key + "&q=" + city_name
+    complete_url=base_url + "key=" + API_K + "&q=" + city_name
 
     #Get request to the API
     response=requests.get(complete_url)
@@ -38,4 +39,4 @@ def weatherֹ_by_city(city_name, api_key):
         print(f"City '{city_name}' not found.")
 
 # Call the function to get weather data
-weatherֹ_by_city(city_name, api_key)
+weatherֹ_by_city(city_name, API_K)
