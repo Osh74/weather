@@ -3,7 +3,7 @@ import json
 import streamlit as st
 
 # Display a headline at the top of the page
-st.title("Real-Time Weather")
+st.title("Real Time Weather")
 
 # Access API key from Streamlit secrets
 API_K = st.secrets["api_key"]  # Access to secret
